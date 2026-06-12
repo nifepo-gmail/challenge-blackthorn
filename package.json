@@ -1,0 +1,32 @@
+{
+  "name": "challenge-blackthorn",
+  "version": "1.0.0",
+  "description": "Senior QA Engineer Challenge — E-Commerce Platform Testing (saucedemo.com)",
+  "private": true,
+  "scripts": {
+    "test": "playwright test --project=chromium",
+    "test:smoke": "playwright test --grep @smoke --project=chromium",
+    "test:challenge": "playwright test --grep @challenge --project=chromium",
+    "test:api": "playwright test --grep @api --project=chromium",
+    "test:local": "playwright test --project=local",
+    "test:pipeline": "playwright test --project=pipeline",
+    "test:all-browsers": "playwright test --project=chromium --project=firefox --project=webkit",
+    "allure:clean": "rimraf allure-results allure-report",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:singlefile": "allure generate allure-results --clean --single-file -o allure-report-single"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@axe-core/playwright": "^4.9.1",
+    "@types/node": "^20.0.0",
+    "allure-playwright": "^3.0.0",
+    "allure-js-commons": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

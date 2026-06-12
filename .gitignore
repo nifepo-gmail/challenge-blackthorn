@@ -1,0 +1,11 @@
+node_modules/
+dist/
+allure-results/
+allure-report/
+allure-report-single/
+playwright-report/
+test-results/
+.env
+*.webm
+*.zip
+test-results/
